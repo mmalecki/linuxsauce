@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+sudo mkdir -p /cores
+sudo chmod a+rw /cores
+sudo sysctl -w kernel.core_pattern=/cores/core.%e.%p
