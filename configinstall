@@ -2,4 +2,4 @@
 sudo mkdir -p /cores
 sudo chmod a+rw /cores
 sudo sysctl -w kernel.core_pattern=/cores/core.%e.%p
-echo 'kernel.core_pattern = /cores/core.%e.%p' | sudo tee /etc/sysctl.d/cores
+echo 'kernel.core_pattern = /cores/core.%e.%p' | sudo tee /etc/sysctl.d/99-cores.conf
