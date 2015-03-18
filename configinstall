@@ -3,3 +3,7 @@ sudo mkdir -p /cores
 sudo chmod a+rw /cores
 sudo sysctl -w kernel.core_pattern=/cores/core.%e.%p
 echo 'kernel.core_pattern = /cores/core.%e.%p' | sudo tee /etc/sysctl.d/99-cores.conf
+
+pluginpath="$(dirname "$(readlink -f $0)")"
+mkdir -pv "$HOME/bin"
+ln -svf "$pluginpath/bin/lock" "$HOME/bin/lock"
